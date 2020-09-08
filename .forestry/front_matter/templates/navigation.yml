@@ -1,0 +1,62 @@
+---
+label: Navigation
+hide_body: true
+fields:
+- name: items
+  type: field_group_list
+  fields:
+  - name: megaMenu
+    type: boolean
+    label: Drop Down Menu
+  - name: text
+    type: text
+    config:
+      required: false
+    label: Menu Label
+  - name: url
+    type: text
+    config:
+      required: false
+    label: Link
+    description: If this is an external link, remember to add https:// in the beginning
+    showOnly:
+      field: megaMenu
+  - name: external
+    type: boolean
+    label: External Link
+    description: Does this link outside of this website?
+    showOnly:
+      field: megaMenu
+  - name: menuItems
+    type: field_group_list
+    fields:
+    - name: text
+      type: text
+      config:
+        required: false
+      label: Drop Down Item Label
+    - name: url
+      type: text
+      config:
+        required: false
+      label: Drop Down Item Link
+      description: If this is an external link, remember to add https:// in the beginning
+    - name: external
+      type: boolean
+      label: External Link
+      description: Does this link outside of this website?
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Drop down items
+    showOnly:
+      field: megaMenu
+      value: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Navigation Items
+pages:
+- src/_data/wdefaults/navigation.json

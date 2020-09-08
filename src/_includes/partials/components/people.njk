@@ -1,0 +1,21 @@
+<div class="content-container">
+    <div class="feature-card-cont">
+        {% for person in people %}
+        <div class="people-card big small-card {% if bgText %} style="color:{{ bgText }}"{% endif %}">
+            <div class="people-card title closer-header">
+                {% if person.photo | length !== 0 %}
+                    <img src="/assets/{{ person.photo }}" class="people-profile"/>
+                {% else %} 
+                    <img src="/assets/{{ information.teamInfo.defaultPhoto }}" class="people-profile" />
+                {% endif %}
+            </div>
+            <div class="people-card content">
+                <h3 class="closer-header">{{ person.name }}</h3>
+                <p>{{ person.networkPosition }}</p>
+                <p>{{ person.position }}</p>
+                <p>{{ person.email }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

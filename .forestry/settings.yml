@@ -1,0 +1,94 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: heading
+  label: Edit network information
+- type: directory
+  path: src/_data/information
+  label: Network Information
+  create: documents
+  match: "*.json"
+  new_doc_ext: json
+- type: heading
+  label: Edit Resources, Blog, Events, News
+- type: directory
+  path: src/content/news
+  label: News
+  create: documents
+  match: "**/*.md"
+  templates:
+  - CONTENT-news
+- type: directory
+  path: src/content/resources
+  label: Resources
+  create: documents
+  match: "**/*.md"
+  templates:
+  - CONTENT-resources
+- type: directory
+  path: src/content/events
+  label: Events
+  create: documents
+  match: "**/*.md"
+  templates:
+  - CONTENT-events
+- type: heading
+  label: Edit Page headings
+- type: document
+  path: src/_data/pages/homepage.json
+  label: HOMEPAGE content
+- type: directory
+  path: src/_data/pages/about
+  label: ABOUT US
+  create: none
+  match: "**/*"
+- type: directory
+  path: src/_data/pages/what
+  label: WHAT WE DO
+  create: none
+  match: "**/*"
+- type: directory
+  path: src/_data/pages/sdgs
+  label: THE SDGs
+  create: none
+  match: "**/*"
+- type: directory
+  path: src/_data/pages/involved
+  label: GET INVOLVED
+  create: none
+  match: "**/*"
+- type: document
+  path: src/_data/pages/searchPage.json
+  label: SEARCH
+- type: heading
+  label: Website structure
+- type: document
+  path: src/_data/wdefaults/navigation.json
+  label: Navigation Bar
+- type: document
+  path: src/_data/wdefaults/commonWords.json
+  label: Edit Default Words
+- type: document
+  path: src/_data/wdefaults/websitecolours.json
+  label: Edit Colour Theme
+- type: document
+  path: src/_data/wdefaults/sdgIcons.json
+  label: Edit SDG Icons
+- type: document
+  path: src/_data/wdefaults/socialMediaIcons.json
+  label: Edit Social Media Icons
+upload_dir: src/assets/uploads
+public_path: "/uploads"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_output_directory: dist
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop

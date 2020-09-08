@@ -1,0 +1,102 @@
+
+{% extends 'layouts/base.njk' %}
+
+{% block content %}
+{% if pages.involved.contactPage.toggle == true %}
+<title>{{ pages.involved.contactPage.bannerTitle }}</title>
+<main id="main-content" tabindex="-1">
+    <div class="cont-us-container">
+        <section class="contact-us-container" {% if bgText %} style="color:{{ bgText }}"{% endif %}>
+                <div class="width-40">
+                    <div class="intro-banner-title">
+                        <h1>{{ pages.involved.contactPage.bannerTitle }}</h1>
+                    </div>
+                    <div class="intro-banner-body banner-sub-title">
+                        {{ pages.involved.contactPage.bannerDesc | safe }}
+                    </div>
+                </div>
+
+                <div class="two-half-wrapper repeat-grid-2">
+                    {% for person in information.contactInfo.contactProfiles %}
+                        <div class="contact-box-card">
+                            <div class="contact-box img">
+                                <img src="/assets{{ person.photo }}" class="border-radius-50"></img>
+                            </div>
+                            <div class="contact-box title">
+                                <h2>{{ person.contactHeader }}</h2>
+                            </div>
+                            <div class="contact-box subtitle">
+                                <p>{{ person.contactDesc }}</p>
+                            </div>
+                            <div class="contact-box button">
+                                <a href="mailto:{{ person.ctaEmail }}" class="resource-link">
+                                    <button class="btn-link wide animate" {% if btnColor %} style="background-color:{{ btnColor }};color:{{ btnText }};"{% endif %}><p class="five">{{ person.ctaTitle }}</p></button>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="two-half-more-content">
+                    <div class="row">
+                        <div class="intro-banner-title">
+                            <h1>{{ pages.involved.contactPage.locationTitle }}</h1>
+                        </div>
+                    </div>
+
+                    {% for host in information.hostInformation.hostInstitution %}
+                    <div class="lean-container">
+                        <div class="split-boxes-30-70 left block align-items-top">
+                            <h3>{{ host.hiName | safe }}</h3>
+                            {% if host.hiShortDesc | length !== 0 %}
+                            <p>{{ host.hiShortDesc | safe }}</p>
+                            {% endif %}
+                            <div class="white-bg-logo">
+                                <img src="/assets{{ host.hiLogo }}" class="nav-logo"></img>
+                            </div>
+                        </div>
+                        <div class="split-boxes-30-70 right align-items-top">
+                            <div class="embed-container">
+                            {{ host.map | safe }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <div class="two-half-more-content">
+                    <div class="row">
+                        <div class="intro-banner-title">
+                            <h1>{{ pages.involved.contactPage.socialsTitle }}</h1>
+                        </div>
+                        <div class="intro-banner-body banner-sub-title">
+                            <p>{{ pages.involved.contactPage.socialsDesc | safe }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% if information.contactInfo.socialMedia == true %}
+                <div class="two-half-wrapper repeat-grid-4 width-100">
+                    {% for pltm in information.contactInfo.socialMediaProfiles %}
+                        <div class="contact-box-card socials">
+                            <div class="contact-box img">
+                                {% set selectedPlatform = pltm.platform %}
+                                {% include "partials/components/get-social-media-icon.njk" %}
+
+                            </div>
+                            <div class="contact-box title">
+                                <h3><b>{{ pltm.socialHeader }}</b></h3>
+                            </div>
+                            <div class="contact-box button">
+                                <a href="{{ pltm.ctaLink | safe }}" class="resource-link">
+                                    <button class="btn-link wide animate" {% if btnColor %} style="background-color:{{ btnColor }};color:{{ btnText }};"{% endif %}><p class="six">{{ pltm.ctaTitle }}</p></button>
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+        </section>
+    </div>
+</main>
+{% endif %}
+{% endblock %}

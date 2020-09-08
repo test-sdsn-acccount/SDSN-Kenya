@@ -1,0 +1,36 @@
+<div class="resource-feature-banner-container">
+    <div class="inner-wrapper">
+    {# Show only posts that have the featured toggle on. All resource, events and news have the toggle #}
+    {% for section in sectionList %}
+        {% if section.data.featuredToggle == true %}
+              <ol class="post-item">
+                  <div class="post-card-top">
+                    <a href="{{ section.url }}">
+                      {% if section.data.fImage !== "" %}
+                        <img src="/assets{{ section.data.fImage }}" class="post-item-img" /> 
+                      {% else %} 
+                        <div class="img-replacement">
+                          {# If there is no feature image, the img-replacement div will show the logo in a grey box instead #}
+                          <img src="/assets{{ logo }}" class="img-replacement" />
+                        </div>
+                      {% endif %}
+                      
+                    </a>
+                  </div>
+                  <div class="post-card-content">
+                    <div class="post-list-title">
+                          <a href="{{ section.url }}"><h5 class="small-squash">{{ section.data.title }}</h5></a>
+                    </div>
+                    <div class="post-list-excerpt seven">
+                      <p class="post-excerpt seven">
+                          {{ section.data.desc | safe }}
+                      </p>
+                    </div>
+                    <div class="post-list-author">
+                          <p class="seven squash"><i>{{ wdefaults.commonWords.writtenBy }} {{ section.data.author }}</i></p>
+                    </div>
+                </ol>
+          {% endif %}
+      {% endfor %}
+    </div>
+</div>
