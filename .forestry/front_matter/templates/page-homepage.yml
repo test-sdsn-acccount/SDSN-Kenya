@@ -57,5 +57,43 @@ fields:
       format: markdown
   label: Address
   description: Please copy and paste Google Map code here
+- name: showBenefits
+  type: boolean
+  label: Show a benefits section
+  default: true
+- name: benefitsTitle
+  type: text
+  label: Benefits Title
+  default: Join a global network of problem solvers and contribute to practical solutions
+    for sustainable development.
+  hidden: false
+  showOnly:
+    field: showBenefits
+    value: true
+- name: involvedBenefits
+  type: field_group_list
+  fields:
+  - name: header
+    type: text
+    config:
+      required: false
+    label: Benefit Title
+  - name: desc
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Benefit Description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Benefits of Getting Involved
+  showOnly:
+    field: showBenefits
+    value: true
 pages:
 - src/_data/pages/homepage.json

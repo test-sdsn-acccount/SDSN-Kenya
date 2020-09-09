@@ -1,10 +1,10 @@
 {
   "title": "Website Colours",
-  "theme1": "<p><strong>Theme 1</strong></p><p><img src=\"/images/theme-screenshots/theme1A.png\"></p><p><img src=\"/images/theme-screenshots/theme1B.png\"></p>",
-  "theme2": "<p><strong>Theme 2</strong></p><p><img src=\"/images/theme-screenshots/theme2A.png\"></p><p><img src=\"/images/theme-screenshots/theme2B.png\"></p>",
-  "theme3": "<p><strong>Theme 3</strong></p><p><img src=\"/images/theme-screenshots/theme3A.png\"></p><p><img src=\"/images/theme-screenshots/theme3B.png\"></p>",
-  "theme4": "<p><strong>Theme 4</strong></p><p><img src=\"/images/theme-screenshots/theme4A.png\"></p><p><img src=\"/images/theme-screenshots/theme4B.png\"></p>",
-  "theme5": "<p><strong>Theme 5</strong></p><p><img src=\"/images/theme-screenshots/theme5A.png\"></p><p><img src=\"/images/theme-screenshots/theme5B.png\"></p>",
-  "colourTheme": "Theme5",
+  "theme1": "<p><strong>Theme 1</strong></p><p>You can also preview the live theme here: <a href=\"https://5f586ae3e3cedd000863491a--sdsn-rn-network.netlify.app/\" title=\"https://5f586ae3e3cedd000863491a--sdsn-rn-network.netlify.app/\">https://5f586ae3e3cedd000863491a--sdsn-rn-network.netlify.app/</a></p><p><img src=\"/images/theme-screenshots/theme1A.png\"></p><p><img src=\"/images/theme-screenshots/theme1B.png\"></p>",
+  "theme2": "<p><strong>Theme 2</strong></p><p>You can also preview the live theme here: <a href=\"https://5f586b630688fc0007c32efc--sdsn-rn-network.netlify.app/\" title=\"https://5f586b630688fc0007c32efc--sdsn-rn-network.netlify.app/\">https://5f586b630688fc0007c32efc--sdsn-rn-network.netlify.app/</a></p><p><img src=\"/images/theme-screenshots/theme2A.png\"></p><p><img src=\"/images/theme-screenshots/theme2B.png\"></p>",
+  "theme3": "<p><strong>Theme 3</strong></p><p>You can also preview the live theme here: <a href=\"https://5f586b9397faa10007466f2f--sdsn-rn-network.netlify.app/\" title=\"https://5f586b9397faa10007466f2f--sdsn-rn-network.netlify.app/\">https://5f586b9397faa10007466f2f--sdsn-rn-network.netlify.app/</a></p><p><img src=\"/images/theme-screenshots/theme3A.png\"></p><p><img src=\"/images/theme-screenshots/theme3B.png\"></p>",
+  "theme4": "<p><strong>Theme 4</strong></p><p>You can also preview the live theme here: <a href=\"https://5f586bafae081c00073bf886--sdsn-rn-network.netlify.app/\" title=\"https://5f586bafae081c00073bf886--sdsn-rn-network.netlify.app/\">https://5f586bafae081c00073bf886--sdsn-rn-network.netlify.app/</a></p><p><img src=\"/images/theme-screenshots/theme4A.png\"></p><p><img src=\"/images/theme-screenshots/theme4B.png\"></p>",
+  "theme5": "<p><strong>Theme 5</strong></p><p>You can also preview the live theme here: <a href=\"https://5f586bcd39f8780008e16cd2--sdsn-rn-network.netlify.app/\" title=\"https://5f586bcd39f8780008e16cd2--sdsn-rn-network.netlify.app/\">https://5f586bcd39f8780008e16cd2--sdsn-rn-network.netlify.app/</a></p><p><img src=\"/images/theme-screenshots/theme5A.png\"></p><p><img src=\"/images/theme-screenshots/theme5B.png\"></p>",
+  "colourTheme": "Theme1",
   "description": "<p>Please scroll down the page, and review the different color palettes. You can choose any of the color palettes by selecting a theme in the drop-down below.</p>"
 }
